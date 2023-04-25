@@ -1,0 +1,49 @@
+Commands run:
+  npm init -y
+  npm install webpack webpack-cli --save-dev
+  npm install --save lodash
+  npx webpack --config webpack.config.js
+
+Add in a build script in the package.json file:
+
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+   },
+
+  npm build
+  npm list
+  npm install --save-dev style-loader css-loader
+
+Add module to webpack.config.js
+
+module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],   // IMPORTANT: KEEP THIS ORDER ['style-loader', 'css-loader']
+      },
+    ],
+  },
+
+
+Note: delete everything in the /dist folder except the index.html file every time you rebuild the project.
+
+npm list  
+restaurant_page@1.0.0 /home/gregm/repos/Restaurant_Page
+├── css-loader@6.7.3
+├── lodash@4.17.21
+├── style-loader@3.3.2
+├── webpack-cli@5.0.1
+└── webpack@5.79.0
+
+index.html call
+<div id = content> function genContent
+  header = Charlies Bird Food function genHeader()
+  nav  function addNavBar
+    Home function addHome
+    Menu function addMenu
+    Contact function addContact
+  main id = tab-content (renders the contents of the nav tabs) function renderTab()
+  footer function addFooter
+</div>
